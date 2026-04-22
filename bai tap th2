@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu mẫu khảo sát ITviec</title>
+    <style>
+        /* 1. Thay đổi phông nền toàn trang */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Phông chữ hiện đại */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Nền chuyển màu chuyên nghiệp */
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* 2. Thiết kế khung container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        /* 3. Tùy chỉnh các ô nhập liệu */
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box; /* Đảm bảo padding không làm tràn khung */
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #764ba2;
+            box-shadow: 0 0 5px rgba(118, 75, 162, 0.2);
+        }
+
+        /* 4. Tùy chỉnh Radio và Checkbox */
+        .radio-group, .checkbox-group {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .sub-text {
+            font-weight: normal;
+            font-size: 13px;
+            color: #666;
+            margin-left: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #a29bfe;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Biểu mẫu khảo sát ITviec</h1>
+    
+    <form>
+        <div class="form-group">
+            <label for="name">Họ tên</label>
+            <input type="text" id="name" placeholder="Nhập tên của bạn">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Nhập email của bạn">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Tuổi</label>
+            <input type="number" id="age" placeholder="Nhập tuổi">
+        </div>
+
+        <div class="form-group">
+            <label>Hiện tại bạn đang là?</label>
+            <select>
+                <option>Học sinh/Sinh viên</option>
+                <option>Đã đi làm</option>
+                <option>Freelancer</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Bạn sẽ giới thiệu ITviec với bạn bè chứ?</label>
+            <label class="radio-group"><input type="radio" name="recommend"> Có</label>
+            <label class="radio-group"><input type="radio" name="recommend"> Không</label>
+            <label class="radio-group"><input type="radio" name="recommend"> Có thể</label>
+        </div>
+
+        <div class="form-group">
+            <label>Ngôn ngữ lập trình và Framework bạn đã biết? <span class="sub-text">(Có thể chọn nhiều đáp án)</span></label>
+            <label class="checkbox-group"><input type="checkbox"> C</label>
+            <label class="checkbox-group"><input type="checkbox"> C++</label>
+            <label class="checkbox-group"><input type="checkbox"> C#</label>
+            <label class="checkbox-group"><input type="checkbox"> JavaScript / ReactJS</label>
+        </div>
+
+        <button type="submit">Gửi khảo sát</button>
+    </form>
+</div>
+
+</body>
+</html>
