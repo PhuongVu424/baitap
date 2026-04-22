@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thông tin cá nhân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px 5px;
+            vertical-align: top;
+        }
+        .label-cell {
+            width: 150px;
+            text-align: left;
+        }
+        input[type="text"], 
+        input[type="password"], 
+        input[type="email"], 
+        select, 
+        textarea {
+            width: 250px;
+            padding: 4px;
+            border: 1px solid #999;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+        .buttons {
+            text-align: center;
+            padding-top: 20px;
+        }
+        button {
+            padding: 5px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid #333;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Đăng ký thông tin cá nhân</h2>
+    
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td class="label-cell">Tài khoản</td>
+                <td><input type="text" name="username" required></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Mật khẩu</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Nhập lại mật khẩu</td>
+                <td><input type="password" name="re-password" required></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Email</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Họ tên</td>
+                <td><input type="text" name="fullname"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">Giới tính</td>
+                <td>
+                    <input type="radio" name="gender" id="nam" value="nam" checked> <label for="nam">nam</label>
+                    <input type="radio" name="gender" id="nu" value="nu"> <label for="nu">nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-cell">Quê quán</td>
+                <td>
+                    <select name="hometown">
+                        <option value="can-tho">Cần Thơ</option>
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="tphcm">TP. Hồ Chí Minh</option>
+                        <option value="da-nang">Đà Nẵng</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-cell">Sở thích</td>
+                <td>
+                    <input type="checkbox" name="hobby" id="dien-anh" checked> <label for="dien-anh">Điện ảnh</label>
+                    <input type="checkbox" name="hobby" id="am-nhac"> <label for="am-nhac">Âm nhạc</label>
+                    <input type="checkbox" name="hobby" id="the-thao"> <label for="the-thao">Thể thao</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="label-cell">Ghi chú cá nhân</td>
+                <td><textarea name="note"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="buttons">
+                    <button type="submit">Lưu</button>
+                    <button type="reset">Nhập lại</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
